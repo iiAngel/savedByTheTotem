@@ -38,16 +38,6 @@ void Hook_PostLoad()
     @totemScreenTexture = CB::LoadAnimTexture("GFX/totem.png", 3, 8, 8, 0, 60);
 }
 
-bool Hook_ExecuteConsoleCommand(string cmd)
-{
-    if (cmd == "qblds")
-    {
-        CB::Player::Bloodloss = 96;
-        return true;
-    }
-    return false;
-}
-
 void Hook_Update()
 {
     if (totemActivated)
